@@ -1,0 +1,57 @@
+.block-card {
+  width: 845px;
+  height: 900px;
+}
+.bg-url {
+  width: 845px;
+  height: 450px;
+  border-radius: 10px;
+}
+.person-img {
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+}
+.person-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.border-bottom {
+  height: 0px;
+  border: 1px solid rgba(17, 17, 17, 0.15);
+}
+.title {
+  color: #111111;
+  width: 737px;
+  height: 128px;
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 160%;
+}
+.hash-tag {
+  color: rgba(17, 17, 17, 0.6);
+  display: flex;
+  gap: 25px;
+  width: 139px;
+  height: 32px;
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 160%;
+  margin-bottom: 50px;
+}
+.mark-as {
+  width: 121px;
+  height: 24px;
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  text-decoration-line: underline;
+  color: #6047ec;
+}

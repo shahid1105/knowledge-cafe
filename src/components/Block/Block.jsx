@@ -1,21 +1,34 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import "./Block.css";
 
-const Block = () => {
-  const [blockElements, setBlockElements] = useState([]);
+const Block = (props) => {
+  const { title, date, authorName, bgUrl, personImg } = props.cafeElement;
 
-  useEffect(() => {
-    fetch("knowledge.json")
-      .then((res) => res.json())
-      .then((data) => console.log(data));
-  }, []);
+  console.log(bgUrl);
   return (
-    <div className="main-container">
-      <div className="block-container">
-        <h1>asdlkfjfdhoifg</h1>
+    <div className="block-card">
+      <img className="bg-url" src={bgUrl} alt="" />
+      <div>
+        <div className="person-container">
+          <div>
+            <img className="person-img" src={personImg} alt="" />
+          </div>
+          <div>
+            <h3>{authorName}</h3>
+            <p>{date}</p>
+          </div>
+        </div>
+        <div></div>
       </div>
-      <div className="blogs-container">
-        <h3>iodjafraeihtfoarijf;lasdkjfashfoawif</h3>
+      <div>
+        <h1 className="title">{title}</h1>
       </div>
+      <div className="hash-tag">
+        <p>#beginners</p>
+        <p>#programming</p>
+      </div>
+      <p className="mark-as">Mark as read</p>
+      <hr className="border-bottom" />
     </div>
   );
 };
