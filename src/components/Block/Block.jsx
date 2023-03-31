@@ -7,6 +7,7 @@ const Block = (props) => {
   const { time, title, date, authorName, bgUrl, personImg } = props.cafeElement;
 
   const clickHandler = props.clickHandler;
+  const bookmarkedClicked = props.bookmarkedClicked;
 
   return (
     <div className="block-card">
@@ -23,7 +24,11 @@ const Block = (props) => {
         </div>
         <div>
           <p>
-            {time} min read <FontAwesomeIcon icon={faBookmark} />
+            {time} min read{" "}
+            <FontAwesomeIcon
+              onClick={() => bookmarkedClicked(props.cafeElement)}
+              icon={faBookmark}
+            />
           </p>
         </div>
       </div>

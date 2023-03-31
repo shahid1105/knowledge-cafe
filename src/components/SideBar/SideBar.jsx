@@ -1,4 +1,5 @@
 import React from "react";
+import "./SideBar.css";
 
 const SideBar = ({ elements }) => {
   let time = 0;
@@ -7,13 +8,7 @@ const SideBar = ({ elements }) => {
   }
   return (
     <div>
-      <div className="spent-time-container">
-        <h3 className="spent-time">Spent time on read : {time} min</h3>
-      </div>
-      <div className="bookmarked-blogs">
-        <h2 className="blogs">Bookmarked Blogs : </h2>
-        <div></div>
-      </div>
+      <h3 className="spent-time">Spent time on read : {time} min</h3>
     </div>
   );
 };
