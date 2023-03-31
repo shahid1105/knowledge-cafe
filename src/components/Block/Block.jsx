@@ -2,12 +2,18 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 import "./Block.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Block = (props) => {
-  const { time, title, date, authorName, bgUrl, personImg } = props.cafeElement;
-
+  const { id, time, title, date, authorName, bgUrl, personImg } =
+    props.cafeElement;
   const clickHandler = props.clickHandler;
   const bookmarkedClicked = props.bookmarkedClicked;
+
+  const handleToast = () => {
+    toast("wow!!!");
+  };
 
   return (
     <div className="block-card">
@@ -26,14 +32,16 @@ const Block = (props) => {
           <p>
             {time} min read{" "}
             <FontAwesomeIcon
-              onClick={() => bookmarkedClicked(props.cafeElement)}
+              onClick={() => bookmarkedClicked()}
               icon={faBookmark}
             />
           </p>
         </div>
       </div>
       <div>
-        <h1 className="title">{title}</h1>
+        <h1 onClick={() => handleToast()} className="title">
+          {title}
+        </h1>
       </div>
       <div className="hash-tag">
         <p>#beginners</p>

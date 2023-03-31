@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Block from "../Block/Block";
 import Bookmarked from "../Bookmarked/Bookmarked";
+import QuestionAnswer from "../Question/QuestionAnswer";
+import SetTitle from "../setTitle/SetTitle";
 import SideBar from "../SideBar/SideBar";
 import "./Cafe.css";
 
@@ -44,7 +46,17 @@ const Cafe = () => {
         </div>
         <div className="bookmarked-blogs">
           <Bookmarked bookmarked={bookmarked}></Bookmarked>
+          <div>
+            {cafeElements.map((cafeElement) => (
+              <SetTitle
+                key={cafeElement.id}
+                cafeElement={cafeElement}></SetTitle>
+            ))}
+          </div>
         </div>
+      </div>
+      <div>
+        <QuestionAnswer></QuestionAnswer>
       </div>
     </div>
   );

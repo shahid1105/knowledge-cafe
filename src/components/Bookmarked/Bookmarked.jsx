@@ -1,4 +1,5 @@
 import React from "react";
+import "./Bookmarked.css";
 
 const Bookmarked = ({ bookmarked }) => {
   return (
