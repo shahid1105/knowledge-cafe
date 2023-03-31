@@ -55,3 +55,7 @@
   text-decoration-line: underline;
   color: #6047ec;
 }
+.person-time {
+  display: flex;
+  justify-content: space-between;
+}

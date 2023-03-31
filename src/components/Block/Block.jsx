@@ -2,13 +2,14 @@ import React from "react";
 import "./Block.css";
 
 const Block = (props) => {
-  const { title, date, authorName, bgUrl, personImg } = props.cafeElement;
+  const { time, title, date, authorName, bgUrl, personImg } = props.cafeElement;
 
-  console.log(bgUrl);
+  const clickHandler = props.clickHandler;
+
   return (
     <div className="block-card">
       <img className="bg-url" src={bgUrl} alt="" />
-      <div>
+      <div className="person-time">
         <div className="person-container">
           <div>
             <img className="person-img" src={personImg} alt="" />
@@ -18,7 +19,10 @@ const Block = (props) => {
             <p>{date}</p>
           </div>
         </div>
-        <div></div>
+        <div>
+          <p>{time} min read</p>
+          <p></p>
+        </div>
       </div>
       <div>
         <h1 className="title">{title}</h1>
@@ -27,7 +31,9 @@ const Block = (props) => {
         <p>#beginners</p>
         <p>#programming</p>
       </div>
-      <p className="mark-as">Mark as read</p>
+      <p className="mark-as" onClick={() => clickHandler(props.cafeElement)}>
+        Mark as read
+      </p>
       <hr className="border-bottom" />
     </div>
   );

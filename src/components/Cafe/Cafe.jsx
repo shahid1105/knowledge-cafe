@@ -10,15 +10,31 @@ const Cafe = () => {
       .then((res) => res.json())
       .then((data) => setCafeElements(data));
   }, []);
+
+  const clickHandler = (readMore) => {
+    console.log(readMore);
+  };
+
   return (
     <div className="main-container">
       <div className="block-container">
         {cafeElements.map((cafeElement) => (
-          <Block cafeElement={cafeElement} key={cafeElement.id}></Block>
+          <Block
+            clickHandler={clickHandler}
+            cafeElement={cafeElement}
+            key={cafeElement.id}></Block>
         ))}
       </div>
       <div className="Bookmarked-container">
-        <h3>iodjafraeihtfoarijf;lasdkjfashfoawif</h3>
+        <div className="spent-time-container">
+          <h3 className="spent-time">Spent time on read : min</h3>
+        </div>
+        <div className="bookmarked-blogs">
+          <h2 className="blogs">Bookmarked Blogs : </h2>
+          <div>
+
+          </div>
+        </div>
       </div>
     </div>
   );
