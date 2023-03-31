@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Block from "../Block/Block";
+import SideBar from "../SideBar/SideBar";
 import "./Cafe.css";
 
 const Cafe = () => {
   const [cafeElements, setCafeElements] = useState([]);
+
+  const [sideBar, setSideBar] = useState([]);
 
   useEffect(() => {
     fetch("knowledge.json")
@@ -11,8 +14,9 @@ const Cafe = () => {
       .then((data) => setCafeElements(data));
   }, []);
 
-  const clickHandler = (readMore) => {
-    console.log(readMore);
+  const clickHandler = (cafeElements) => {
+    const newSideBar = [...sideBar, cafeElements];
+    setSideBar(newSideBar);
   };
 
   return (
@@ -25,16 +29,8 @@ const Cafe = () => {
             key={cafeElement.id}></Block>
         ))}
       </div>
-      <div className="Bookmarked-container">
-        <div className="spent-time-container">
-          <h3 className="spent-time">Spent time on read : min</h3>
-        </div>
-        <div className="bookmarked-blogs">
-          <h2 className="blogs">Bookmarked Blogs : </h2>
-          <div>
-
-          </div>
-        </div>
+      <div className="Side-bar-container">
+        <SideBar elements={sideBar}></SideBar>
       </div>
     </div>
   );

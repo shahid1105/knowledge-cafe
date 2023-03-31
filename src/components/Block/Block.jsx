@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 import "./Block.css";
 
 const Block = (props) => {
@@ -15,13 +17,14 @@ const Block = (props) => {
             <img className="person-img" src={personImg} alt="" />
           </div>
           <div>
-            <h3>{authorName}</h3>
-            <p>{date}</p>
+            <h3 className="name">{authorName}</h3>
+            <p className="date">{date}</p>
           </div>
         </div>
         <div>
-          <p>{time} min read</p>
-          <p></p>
+          <p>
+            {time} min read <FontAwesomeIcon icon={faBookmark} />
+          </p>
         </div>
       </div>
       <div>

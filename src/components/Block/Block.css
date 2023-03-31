@@ -59,3 +59,9 @@
   display: flex;
   justify-content: space-between;
 }
+.date {
+  margin-top: 0;
+}
+.name {
+  margin-bottom: 0;
+}
