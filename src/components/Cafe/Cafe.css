@@ -40,3 +40,29 @@
 
   color: #111111;
 }
+.question-answer {
+  width: 845px;
+}
+
+@media only screen and (max-width: 576px) {
+  .main-container {
+    display: block;
+  }
+  .spent-time-container {
+    width: 566px;
+  }
+  .bookmarked-blogs {
+    width: 576px;
+    height: 1352px;
+  }
+  .title-side-bar {
+    width: 490px;
+    height: 98px;
+    margin-left: 30px;
+    margin-bottom: 16px;
+    padding: 15px;
+  }
+  .question-answer {
+    width: 566px;
+  }
+}

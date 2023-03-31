@@ -65,3 +65,25 @@
 .name {
   margin-bottom: 0;
 }
+.title {
+  width: 845px;
+}
+@media only screen and (max-width: 576px) {
+  .block-card {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 566px;
+    height: 900px;
+  }
+  .bg-url {
+    width: 566px;
+    height: 450px;
+    border-radius: 10px;
+  }
+  .person-container {
+    margin-right: 5px;
+  }
+  .title {
+    width: 566px;
+  }
+}
