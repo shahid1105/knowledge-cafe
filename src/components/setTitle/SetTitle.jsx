@@ -1,11 +1,10 @@
 import React from "react";
 import "./SetTitle.css";
 
-const SetTitle = (props) => {
-  const { title } = props.cafeElement;
+const SetTitle = ({ titleElement }) => {
   return (
-    <div className="title-side-bar">
-      <p>{title}</p>
+    <div>
+      <p className="title-side-bar">{titleElement}</p>
     </div>
   );
 };

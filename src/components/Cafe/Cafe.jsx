@@ -9,9 +9,11 @@ import "./Cafe.css";
 const Cafe = () => {
   const [cafeElements, setCafeElements] = useState([]);
 
-  const [sideBar, setSideBar] = useState([]);
+  const [sideBarTime, setSideBar] = useState([]);
 
-  const [bookmarked, setBookmarked] = useState([]);
+  const [bookmarkedCount, setBookmarked] = useState([]);
+
+  const [bookmarkedTitle, setBookmarkedTitle] = useState([]);
 
   useEffect(() => {
     fetch("knowledge.json")
@@ -20,12 +22,14 @@ const Cafe = () => {
   }, []);
 
   const bookmarkedClicked = (cafeElements) => {
-    const newBookmarked = [...bookmarked, cafeElements];
+    const newBookmarked = [...bookmarkedCount, cafeElements];
     setBookmarked(newBookmarked);
+    const newBookmarkedTitle = [...bookmarkedTitle, cafeElements];
+    setBookmarkedTitle(newBookmarkedTitle);
   };
 
   const clickHandler = (cafeElements) => {
-    const newSideBar = [...sideBar, cafeElements];
+    const newSideBar = [...sideBarTime, cafeElements];
     setSideBar(newSideBar);
   };
 
@@ -42,15 +46,15 @@ const Cafe = () => {
       </div>
       <div className="Side-bar-container">
         <div className="spent-time-container">
-          <SideBar elements={sideBar}></SideBar>
+          <SideBar elements={sideBarTime}></SideBar>
         </div>
         <div className="bookmarked-blogs">
-          <Bookmarked bookmarked={bookmarked}></Bookmarked>
-          <div>
-            {cafeElements.map((cafeElement) => (
+          <Bookmarked bookmarkedCount={bookmarkedCount}></Bookmarked>
+          <div className="setTitle">
+            {bookmarkedTitle.map((titleElement) => (
               <SetTitle
-                key={cafeElement.id}
-                cafeElement={cafeElement}></SetTitle>
+                titleElement={titleElement}
+                key={titleElement.id}></SetTitle>
             ))}
           </div>
         </div>

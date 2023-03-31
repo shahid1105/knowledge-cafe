@@ -1,11 +1,11 @@
 import React from "react";
 import "./Bookmarked.css";
 
-const Bookmarked = ({ bookmarked }) => {
+const Bookmarked = ({ bookmarkedCount }) => {
   return (
     <div>
       <div>
-        <h2 className="blogs">Bookmarked Blogs : {bookmarked.length}</h2>
+        <h2 className="blogs">Bookmarked Blogs : {bookmarkedCount.length}</h2>
       </div>
     </div>
   );

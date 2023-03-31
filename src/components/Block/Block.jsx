@@ -31,17 +31,14 @@ const Block = (props) => {
         <div>
           <p>
             {time} min read{" "}
-            <FontAwesomeIcon
-              onClick={() => bookmarkedClicked()}
-              icon={faBookmark}
-            />
+            <button onClick={() => bookmarkedClicked(title)}>
+              <FontAwesomeIcon icon={faBookmark} />
+            </button>
           </p>
         </div>
       </div>
       <div>
-        <h1 onClick={() => handleToast()} className="title">
-          {title}
-        </h1>
+        <h1 className="title">{title}</h1>
       </div>
       <div className="hash-tag">
         <p>#beginners</p>

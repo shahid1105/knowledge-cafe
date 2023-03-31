@@ -70,20 +70,23 @@
 }
 @media only screen and (max-width: 576px) {
   .block-card {
-    margin-left: 5px;
+    margin-left: 0px;
     margin-right: 5px;
     width: 566px;
     height: 900px;
   }
   .bg-url {
-    width: 566px;
+    width: 550px;
     height: 450px;
     border-radius: 10px;
   }
-  .person-container {
-    margin-right: 5px;
-  }
   .title {
-    width: 566px;
+    width: 500px;
+  }
+  .border-bottom {
+    width: 540px;
+  }
+  .person-time {
+    width: 540px;
   }
 }

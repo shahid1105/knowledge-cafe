@@ -15,7 +15,7 @@
 }
 @media only screen and (max-width: 576px) {
   .line {
-    width: 566px;
+    width: 560px;
   }
   .menu {
     display: flex;

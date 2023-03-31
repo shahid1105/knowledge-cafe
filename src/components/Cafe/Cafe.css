@@ -1,3 +1,7 @@
+.Side-bar-container {
+  position: sticky;
+  top: 0;
+}
 .main-container {
   display: grid;
   grid-template-columns: 4fr 1fr;
@@ -14,7 +18,7 @@
 }
 .bookmarked-blogs {
   width: 411px;
-  height: 1352px;
+  padding-bottom: 40px;
 
   background: rgba(17, 17, 17, 0.05);
   border-radius: 8px;
@@ -49,11 +53,10 @@
     display: block;
   }
   .spent-time-container {
-    width: 566px;
+    width: 560px;
   }
   .bookmarked-blogs {
-    width: 576px;
-    height: 1352px;
+    width: 560px;
   }
   .title-side-bar {
     width: 490px;
@@ -63,6 +66,9 @@
     padding: 15px;
   }
   .question-answer {
-    width: 566px;
+    width: 560px;
+  }
+  .Side-bar-container {
+    position: relative;
   }
 }
